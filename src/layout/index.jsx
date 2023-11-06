@@ -2,8 +2,10 @@ import './index.less'
 import Main from './components/Main'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
+import { useEffect } from 'react'
 
-const Layout = () => {
+const Layout = (props) => {
+       
     return (
         <div className='layout-page'>
             <div className="layout-header">
@@ -14,7 +16,9 @@ const Layout = () => {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="bodyer-right">
-                    <Main></Main>
+                    <Main>
+                        {props.children}
+                    </Main>
                 </div>
             </div>
         </div>

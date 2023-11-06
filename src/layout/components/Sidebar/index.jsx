@@ -6,6 +6,7 @@ import {
     FolderOpenOutlined,
     FileTextOutlined
  } from '@ant-design/icons';
+ import { useNavigate } from 'react-router-dom';
 
 function getItem(label, key, icon, children, type) {
     return {
@@ -19,24 +20,25 @@ function getItem(label, key, icon, children, type) {
 
 const items = [
     getItem('星光计划', 'sub1', <StarOutlined />, [
-        getItem('申报信息录入', 'g11'),
-        getItem('信息变更', 'g12'),
-        getItem('结题材料上交', 'g13'),
+        getItem('申报信息录入', '/home/star/declaration-entry'),
+        getItem('信息变更', '/home/star/information-changes'),
+        getItem('结题材料上交', '/home/star/closing-materials'),
     ]),
     getItem('新苗计划', 'sub2', <AlertOutlined />, [
-        getItem('申报信息录入', 'g21'),
-        getItem('信息变更', 'g22'),
-        getItem('结题材料上交', 'g23'),
+        getItem('申报信息录入', '/home/new/declaration-entry'),
+        getItem('信息变更', '/home/new/information-changes'),
+        getItem('结题材料上交', '/home/new/closing-materials'),
     ]),
-    getItem('通知材料', 'sub3', <FolderOpenOutlined />),
-    getItem('使用说明', 'sub4', <FileTextOutlined />)
+    getItem('通知材料', '/home/notification-materials', <FolderOpenOutlined />),
+    getItem('使用说明', '/home/use-instructions', <FileTextOutlined />)
 ]
 
 
 
 const Sidebar = () => {
-    const onClick = () => {
-
+    const navigate = useNavigate()
+    const onClick = (e) => {
+        navigate(e.key)
     }
     return (
         <div className="sidebar-box">
@@ -47,7 +49,7 @@ const Sidebar = () => {
                 width: '100%'
             }}
             defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
+            defaultOpenKeys={[]}
             mode="inline"
             items={items}
             ></Menu>

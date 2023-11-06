@@ -1,10 +1,14 @@
 import './index.less'
-import Breadcrumb from '../../../components/Breadcrumb'
+import BreadcrumbCard from '../../../components/BreadcrumbCard'
 
-const Main = () => {
+
+const Main = (props) => {
     return (
         <div className="main-box">
-            <Breadcrumb></Breadcrumb>
+            <BreadcrumbCard></BreadcrumbCard>
+            <div className="route-container">
+               {props.children}
+            </div>
         </div>
     )
 }
