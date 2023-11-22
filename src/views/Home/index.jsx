@@ -7,6 +7,9 @@ import NotificationMaterials from './components/NotificationMaterials'
 import InformationChanges from "./components/InformationChanges"
 import DeclarationEntry from "./components/DeclarationEntry"
 import ClosingMaterials from "./components/ClosingMaterials"
+import NewDeclarationEntry from "./components/NewDeclarationEntry"
+import NewInformationChanges from "./components/NewInformationChanges"
+import NewClosingMaterials from "./components/NewClosingMaterials"
 
 const Home = () => {
     return (
@@ -20,9 +23,9 @@ const Home = () => {
                     <Route path="/star/information-changes" element={<InformationChanges></InformationChanges>}></Route>
                     <Route path="/star/declaration-entry" element={<DeclarationEntry></DeclarationEntry>}></Route>
                     <Route path="/star/closing-materials" element={<ClosingMaterials></ClosingMaterials>}></Route>
-                    <Route path="/new/information-changes" element={<InformationChanges></InformationChanges>}></Route>
-                    <Route path="/new/declaration-entry" element={<DeclarationEntry></DeclarationEntry>}></Route>
-                    <Route path="/new/closing-materials" element={<ClosingMaterials></ClosingMaterials>}></Route>
+                    <Route path="/new/information-changes" element={<NewInformationChanges></NewInformationChanges>}></Route>
+                    <Route path="/new/declaration-entry" element={<NewDeclarationEntry></NewDeclarationEntry>}></Route>
+                    <Route path="/new/closing-materials" element={<NewClosingMaterials></NewClosingMaterials>}></Route>
                 </Routes>
             </Layout>
         </>

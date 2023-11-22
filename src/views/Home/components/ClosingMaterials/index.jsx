@@ -1,4 +1,4 @@
-import { Card, Row, Col, Input, Upload, message } from "antd"
+import { Card, Row, Col, Input, Upload, message, Button, Flex } from "antd"
 import { InboxOutlined } from '@ant-design/icons';
 const { Dragger } = Upload;
 
@@ -45,6 +45,17 @@ const ClosingMaterials = () => {
                             支持单个或批量上传。严禁上传敏感数据或其他被禁止的文件
                         </p>
                     </Dragger>
+            </Card>
+            <Card style={{marginTop: '20px'}}>
+                <Row>
+                    <Col span={21}></Col>
+                    <Col span={3}>
+                        <Flex justify="space-between">
+                            <Button type="primary">保存</Button>
+                            <Button>提交</Button>
+                        </Flex>
+                    </Col>
+                </Row>
             </Card>
         </div>
     )

@@ -29,7 +29,7 @@ const items = [
         getItem('信息变更', '/home/new/information-changes'),
         getItem('结题材料上交', '/home/new/closing-materials'),
     ]),
-    getItem('通知材料', '/home/notification-materials', <FolderOpenOutlined />),
+    getItem('通知链接', '/home/notification-materials', <FolderOpenOutlined />),
     getItem('使用说明', '/home/use-instructions', <FileTextOutlined />)
 ]
 
